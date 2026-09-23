@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of YOUR NAME, a PhD researcher working in YOUR RESEARCH AREA.">
+  <meta name="theme-color" content="#12344b">
+  <title>YOUR NAME | Academic Website</title>
+  <style>
+    :root { --ink:#142b3b; --subtle:#536575; --line:#dbe5e9; --navy:#12344b; --teal:#006e71; --paper:#f7faf9; --white:#fff; --accent:#e9f3f0; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--white); color:var(--ink); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height:1.65; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:var(--navy); }
+    a:focus-visible { outline:3px solid #e1ae5b; outline-offset:4px; border-radius:3px; }
+    .notice { padding:.55rem 1.25rem; text-align:center; background:#fff2d9; border-bottom:1px solid #edcf91; color:#76500c; font-size:.82rem; font-weight:650; letter-spacing:.025em; }
+    .wrap { width:min(1040px, calc(100% - 44px)); margin-inline:auto; }
+    header { background:#fff; border-bottom:1px solid var(--line); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:21px 0; }
+    .brand { font-weight:780; font-size:1.1rem; letter-spacing:-.025em; color:var(--navy); text-decoration:none; white-space:nowrap; }
+    nav { display:flex; flex-wrap:wrap; gap:11px 25px; font-size:.9rem; }
+    nav a { color:#405767; text-decoration:none; }
+    nav a:hover { color:var(--teal); }
+    .hero { background:linear-gradient(135deg, #f3f8f7, #fff 72%); border-bottom:1px solid var(--line); }
+    .hero-inner { display:grid; grid-template-columns:minmax(0,1fr) 220px; align-items:center; gap:58px; padding:78px 0 75px; }
+    .eyebrow { text-transform:uppercase; font-size:.76rem; font-weight:750; letter-spacing:.16em; color:var(--teal); }
+    h1 { font-size:clamp(2.7rem, 5.8vw, 4.6rem); line-height:1.08; letter-spacing:-.055em; margin:17px 0; color:var(--navy); }
+    .role { font-size:1.15rem; margin:0 0 25px; color:#486273; }
+    .intro { max-width:610px; margin:0 0 31px; font-size:1.08rem; color:#354c5c; }
+    .links { display:flex; gap:11px; flex-wrap:wrap; align-items:center; }
+    .button { display:inline-block; padding:10px 17px; border-radius:6px; font-size:.91rem; font-weight:675; text-decoration:none; }
+    .button.primary { background:var(--navy); color:#fff; }
+    .button.primary:hover { background:#225470; color:#fff; }
+    .button.secondary { background:#fff; border:1px solid #b8cdd0; color:var(--navy); }
+    .button.secondary:hover { background:var(--accent); }
+    .photo { width:220px; height:260px; border-radius:10px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; background:#e2eded; border:1px solid #c9dcdb; color:#668487; box-shadow:15px 15px 0 #cbe0dc; }
+    .photo .initials { font-family:Georgia, serif; font-size:4rem; letter-spacing:-.07em; color:#779596; }
+    .photo span:last-child { font-size:.81rem; font-weight:700; }
+    main { padding-bottom:40px; }
+    section { padding:52px 0 10px; scroll-margin-top:30px; }
+    section + section { border-top:1px solid var(--line); margin-top:35px; }
+    .section-heading { margin:0 0 21px; font-size:1.75rem; letter-spacing:-.035em; color:var(--navy); }
+    .section-intro { margin:0 0 25px; max-width:760px; color:#4a5d6b; }
+    .two-up { display:grid; grid-template-columns:1.4fr 1fr; gap:50px; }
+    .small-title { font-size:.88rem; text-transform:uppercase; color:var(--teal); letter-spacing:.10em; font-weight:780; margin:2px 0 14px; }
+    .topics { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:9px; }
+    .topics li { background:var(--accent); border:1px solid #d6e6e1; padding:5px 11px; border-radius:4px; font-size:.88rem; color:#235b5d; }
+    .work { padding:21px 0; border-top:1px solid var(--line); }
+    .work:first-of-type { border-top:0; }
+    .work h3 { margin:0 0 6px; font-size:1.08rem; line-height:1.4; color:var(--navy); }
+    .work p { margin:4px 0; color:var(--subtle); font-size:.94rem; }
+    .pill { display:inline-block; padding:2px 8px; border:1px solid #c8dada; background:#f0f7f4; border-radius:30px; color:#276265; font-weight:700; font-size:.75rem; }
+    .callout { margin-top:21px; background:var(--paper); border-left:3px solid #74aaa0; padding:17px 20px; color:#4f636d; font-size:.93rem; }
+    footer { border-top:1px solid var(--line); background:var(--paper); padding:31px 0; font-size:.87rem; color:#637483; }
+    footer .wrap { display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; }
+    @media(max-width:680px) {
+      .topbar { align-items:flex-start; flex-direction:column; gap:10px; }
+      nav { gap:7px 19px; }
+      .hero-inner { grid-template-columns:1fr; gap:32px; padding:48px 0; }
+      .photo { width:156px; height:180px; box-shadow:9px 9px 0 #cbe0dc; }
+      .photo .initials { font-size:3rem; }
+      .two-up { grid-template-columns:1fr; gap:25px; }
+      section { padding-top:39px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { .notice, nav { display:none; } .hero-inner { padding:20px 0; } section { page-break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <!-- DELETE the yellow banner below when you've replaced all placeholders. -->
+  <div class="notice">WEBSITE STARTER · Replace CAPITALIZED placeholder text before publishing</div>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#home">YOUR NAME<span style="color:#158082">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div id="home" class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Academic homepage</div>
+        <h1>YOUR NAME</h1>
+        <p class="role">PhD Candidate in YOUR DEPARTMENT<br>YOUR UNIVERSITY</p>
+        <p class="intro">I study YOUR MAIN RESEARCH AREA. My research focuses on THE PROBLEMS YOU WORK ON, using IDEAS OR METHODS THAT INTEREST YOU.</p>
+        <div class="links">
+          <a class="button primary" href="#research">Explore my research →</a>
+          <a class="button secondary" href="#publications">Publications</a>
+          <!-- When you upload cv.pdf, add: <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener">Download CV ↗</a> -->
+        </div>
+      </div>
+      <!-- Replace this placeholder block with <img src="photo.jpg" alt="Portrait of YOUR NAME" class="photo" style="object-fit:cover"> after uploading photo.jpg. -->
+      <div class="photo" aria-label="Placeholder for your portrait">
+        <span class="initials">YN</span><span>YOUR PHOTO HERE</span>
+      </div>
+    </div>
+  </div>
+  <main class="wrap">
+    <section id="about">
+      <h2 class="section-heading">About</h2>
+      <div class="two-up">
+        <div>
+          <p>I am a PhD candidate in YOUR DEPARTMENT at YOUR UNIVERSITY, advised by YOUR ADVISOR. My work is broadly situated in YOUR RESEARCH FIELD.</p>
+          <p>Before joining YOUR UNIVERSITY, I studied YOUR PREVIOUS DEGREE OR INSTITUTION. Outside research, ADD A SENTENCE ONLY IF YOU WISH.</p>
+        </div>
+        <div>
+          <p class="small-title">Research interests</p>
+          <ul class="topics"><li>RESEARCH TOPIC 1</li><li>RESEARCH TOPIC 2</li><li>RESEARCH TOPIC 3</li></ul>
+        </div>
+      </div>
+    </section>
+    <section id="research">
+      <h2 class="section-heading">Research</h2>
+      <p class="section-intro">Describe your research here in two or three accessible paragraphs. State the main mathematical or scientific question, why it matters, and what tools or perspectives you use. Readers should understand the broad motivation even if they are not specialists in your field.</p>
+      <div class="callout"><strong>Current projects.</strong> Add a sentence or two about your ongoing work and a link to a preprint or research statement when one is ready.</div>
+    </section>
+    <section id="publications">
+      <h2 class="section-heading">Publications &amp; preprints</h2>
+      <p class="section-intro">List your work in reverse chronological order. Distinguish published papers, accepted work, preprints and manuscripts under review.</p>
+      <article class="work">
+        <h3>YOUR FIRST PAPER TITLE</h3>
+        <p>YOUR NAME and COAUTHOR NAMES · JOURNAL OR PREPRINT SERVER, YEAR</p>
+        <p><span class="pill">STATUS: REPLACE ME</span> &nbsp; Add PDF, arXiv or DOI links when available.</p>
+      </article>
+      <article class="work">
+        <h3>YOUR SECOND PAPER TITLE</h3>
+        <p>YOUR NAME and COAUTHOR NAMES · JOURNAL OR PREPRINT SERVER, YEAR</p>
+        <p><span class="pill">STATUS: REPLACE ME</span> &nbsp; Add PDF, arXiv or DOI links when available.</p>
+      </article>
+    </section>
+    <section id="teaching">
+      <h2 class="section-heading">Teaching</h2>
+      <p class="section-intro">Include courses you have taught or assisted with. You can add course materials or a short teaching statement later.</p>
+      <article class="work"><h3>COURSE TITLE — YOUR ROLE</h3><p>YOUR UNIVERSITY · TERM AND YEAR</p></article>
+    </section>
+    <section id="contact">
+      <h2 class="section-heading">Contact</h2>
+      <p>YOUR DEPARTMENT · YOUR UNIVERSITY</p>
+      <p>Email: <a href="mailto:you@university.edu">you@university.edu</a> (REPLACE THIS ADDRESS)</p>
+      <p>OPTIONAL: Add your Google Scholar, ORCID, GitHub and LinkedIn links here.</p>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© <span id="year">2026</span> YOUR NAME</span><span>Academic website · Hosted with GitHub Pages</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
